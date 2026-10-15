@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ncaabet"
+version = "0.1.0"
+description = "NCAA men's basketball spread and total model with an edge finder"
+requires-python = ">=3.10"
+dependencies = ["numpy", "pandas>=2.0", "pyarrow", "requests"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+ncaabet = "ncaabet.cli:main"
+
+[tool.setuptools]
+packages = ["ncaabet"]
